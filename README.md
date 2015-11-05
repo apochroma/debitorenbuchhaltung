@@ -1,4 +1,4 @@
 # debitorenbuchhaltung
 Eine Debitorenbuchhaltung von Kreativen für Kreative
-*kursiv
-i'm updating this
+
+Und nun mache ich eine Änderung, die ich als Pull-Request platziere. 
