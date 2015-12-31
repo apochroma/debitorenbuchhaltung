@@ -1,3 +1,11 @@
+<?php
+include('inc/main.php');
+connect_to_db();
+
+$countries = Country::all();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,9 +27,15 @@
 	<input id="city" type="text" name="city" placeholder="Ortschaft" style="width: 145px;">
 	<br>
 	
+	<select name='country'>
+		<option value='0'>Land auswählen</option>
 	<?php
-	print "<select name='tickets' style='margin: 0px 0px 20px;'>"
+		
+		foreach ($countries as $country) {
+			print "\t\t<option value='".$country->country_code."'>".$country->country_name."</option>\r\n";
+		}
 	?>
+	</select>
 	
 	<input id="country" type="text" name="country" placeholder="Land">
 	<br><br>
